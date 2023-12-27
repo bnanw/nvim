@@ -13,6 +13,8 @@ return require('packer').startup(function(use)
 
   -- theme
   use 'folke/tokyonight.nvim'
+  use 'tjdevries/colorbuddy.nvim'
+  use 'svrana/neosolarized.nvim'
 
   -- lsp-zero
   use {
@@ -90,6 +92,7 @@ return require('packer').startup(function(use)
       "Pocco81/auto-save.nvim",
       config = function()
         require("auto-save").setup {
+          enabled = false
           -- your config goes here
           -- or just leave it empty :)
         }
@@ -104,6 +107,46 @@ return require('packer').startup(function(use)
     },
 
     -- floating terminal
-    use "numToStr/Fterm.nvim"
+    use "numToStr/Fterm.nvim",
+
+    -- dashboard
+    use {
+      'nvimdev/dashboard-nvim',
+      event = 'VimEnter',
+      config = function()
+        require('dashboard').setup {
+          theme = 'hyper',
+          config = {
+            week_header = {
+              enable = true,
+            },
+            shortcut = {
+              { desc = '󰊳 Update', group = '@property', action = 'Lazy update', key = 'u' },
+              {
+                icon = ' ',
+                icon_hl = '@variable',
+                desc = 'Files',
+                group = 'Label',
+                action = 'Telescope find_files',
+                key = 'f',
+              },
+              {
+                desc = ' Apps',
+                group = 'DiagnosticHint',
+                action = 'Telescope app',
+                key = 'a',
+              },
+              {
+                desc = ' dotfiles',
+                group = 'Number',
+                action = 'Telescope dotfiles',
+                key = 'd',
+              },
+            },
+          },
+        }
+      end,
+      requires = {'nvim-tree/nvim-web-devicons'}
+    }
 }
 end)

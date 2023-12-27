@@ -18,6 +18,7 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.cursorline = true
 vim.opt.wrap = false
+vim.opt.showmode = false
 
 vim.g.mapleader = " "
 
@@ -47,7 +48,7 @@ vim.keymap.set("x", "<C-Up>", ":move '<-2<CR>gv-gv", { silent = true })
 vim.keymap.set("n", "<leader>g", "<cmd>:LazyGit<cr>", { silent = true })
 
 --bufferline shortcuts
-vim.keymap.set("n", "<A-Left>", "<cmd>:BufferLineCyclePrev<cr>", { silent = true })
-vim.keymap.set("n", "<A-Right>", "<cmd>:BufferLineCycleNext<cr>", { silent = true })
+--vim.keymap.set("n", "<A-Left>", "<cmd>:BufferLineCyclePrev<cr>", { silent = true })
+--vim.keymap.set("n", "<A-Right>", "<cmd>:BufferLineCycleNext<cr>", { silent = true })
 
 require ("user")
