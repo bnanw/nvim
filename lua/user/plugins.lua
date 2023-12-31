@@ -81,12 +81,11 @@ return require('packer').startup(function(use)
     -- for smart auto-pairs
     use {
       'ZhiyuanLck/smart-pairs',
-      event = 'InsertEnter',
+      -- event = 'InsertEnter',
       config = function()
         require('pairs'):setup()
       end
     },
-
     -- auto-save
     use {
       "Pocco81/auto-save.nvim",
@@ -99,15 +98,8 @@ return require('packer').startup(function(use)
       end,
     },
 
-    -- bufferline for tabs
-    use {
-      'akinsho/bufferline.nvim',
-      tag = "*",
-      requires = 'nvim-tree/nvim-web-devicons'
-    },
-
-    -- floating terminal
-    use "numToStr/Fterm.nvim",
+    -- nvim-lsp for java
+    use 'mfussenegger/nvim-jdtls',
 
     -- dashboard
     use {
@@ -147,6 +139,7 @@ return require('packer').startup(function(use)
         }
       end,
       requires = {'nvim-tree/nvim-web-devicons'}
-    }
+    },
+    use { 'michaelb/sniprun', run = 'sh ./install.sh' }
 }
 end)

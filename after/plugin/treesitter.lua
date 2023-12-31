@@ -1,12 +1,13 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "lua",
+  ensure_installed = {
+    "lua",
     "vim",
     "vimdoc",
     "html",
     "css",
     "java",
     "javascript",
-    "rust",
+    "c",
     "regex",
     "json",
     "passwd",
@@ -16,6 +17,7 @@ require'nvim-treesitter.configs'.setup {
     "yaml",
     "bash",
     "awk",
+    "cmake",
     highlight = {
       enable = true,
     }

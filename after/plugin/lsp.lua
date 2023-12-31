@@ -15,9 +15,10 @@ require('mason-lspconfig').setup({
     'tsserver',
     'html',
     'cssls',
-    'rust_analyzer',
+    'clangd',
     'bashls',
-    'eslint'
+    'eslint',
+  -- 'cmake', until it supports python 3.12
   },
   handlers = {
     lsp_zero.default_setup,
