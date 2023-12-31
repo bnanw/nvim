@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'tjdevries/colorbuddy.nvim'
   use 'svrana/neosolarized.nvim'
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
 
   -- lsp-zero
   use {
