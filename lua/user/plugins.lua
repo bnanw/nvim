@@ -17,6 +17,14 @@ return require('packer').startup(function(use)
   use 'svrana/neosolarized.nvim'
   use({ 'rose-pine/neovim', as = 'rose-pine' })
 
+  -- markdown
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
+  use "folke/zen-mode.nvim"
+
   -- lsp-zero
   use {
     'VonHeikemen/lsp-zero.nvim',

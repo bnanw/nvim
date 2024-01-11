@@ -18,7 +18,7 @@ require('mason-lspconfig').setup({
     'clangd',
     'bashls',
     'eslint',
-  -- 'cmake', until it supports python 3.12
+    'cmake',
   },
   handlers = {
     lsp_zero.default_setup,

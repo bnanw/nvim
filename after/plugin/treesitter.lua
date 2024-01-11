@@ -18,6 +18,7 @@ require'nvim-treesitter.configs'.setup {
     "bash",
     "awk",
     "cmake",
+    "markdown",
     highlight = {
       enable = true,
     }
